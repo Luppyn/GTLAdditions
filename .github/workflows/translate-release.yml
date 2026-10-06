@@ -106,6 +106,7 @@ jobs:
         env:
           GITHUB_ACTION_NUMBER: ${{ github.run_number }}
           GITHUB_RUN_NUMBER: ${{ github.run_number }}
+          DEVELOCITY_TERMS_OF_USE_AGREE: "yes"
         run: ./gradlew build -x spotlessCheck --no-daemon -Pkotlin.compiler.execution.strategy=in-process
 
       - name: Localizar JAR
