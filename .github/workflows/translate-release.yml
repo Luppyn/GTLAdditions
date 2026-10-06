@@ -78,16 +78,8 @@ jobs:
           distribution: temurin
           java-version: "21"
 
-      - name: Cache do Gradle
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-            .gradle
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties', 'gradle.properties') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-
+      - name: Configurar Gradle (cache do wrapper, dependencias e Loom)
+        uses: gradle/actions/setup-gradle@v4
 
       - name: Permissao de execucao ao gradlew
         run: chmod +x gradlew
@@ -96,7 +88,7 @@ jobs:
         env:
           GITHUB_ACTION_NUMBER: ${{ github.run_number }}
           GITHUB_RUN_NUMBER: ${{ github.run_number }}
-        run: ./gradlew build -x spotlessCheck --no-daemon
+        run: ./gradlew build -x spotlessCheck --no-daemon -Pkotlin.compiler.execution.strategy=in-process
 
       - name: Localizar JAR
         id: jar
