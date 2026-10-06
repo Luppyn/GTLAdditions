@@ -1,3 +1,4 @@
+[Português Brasileiro](README.md)
 [简体中文](README.zh.md)
 
 <div align="center">
