@@ -101,11 +101,13 @@ jobs:
       - name: Permissao de execucao ao gradlew
         run: chmod +x gradlew
 
-      - name: Build do JAR
+      - name: Build do JAR (com Build Scan)
         env:
           GITHUB_ACTION_NUMBER: ${{ github.run_number }}
           GITHUB_RUN_NUMBER: ${{ github.run_number }}
-        run: ./gradlew build -x spotlessCheck --no-daemon -Pkotlin.compiler.execution.strategy=in-process
+          DEVELOCITY_TERMS_OF_USE_AGREE: "yes"
+          GRADLE_TERMS_OF_USE_AGREE: "yes"
+        run: ./gradlew build -x spotlessCheck --no-daemon --scan -Pkotlin.compiler.execution.strategy=in-process
 
       - name: Localizar JAR
         id: jar
