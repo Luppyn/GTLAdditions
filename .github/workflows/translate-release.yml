@@ -95,7 +95,6 @@ jobs:
       - name: Configurar Gradle (cache de dependencias e de build)
         uses: gradle/actions/setup-gradle@v4
         with:
-          build-cache-enabled: true
           cache-read-only: false
 
       - name: Permissao de execucao ao gradlew
