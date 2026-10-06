@@ -7,9 +7,7 @@
 
 > **[!TIP]**
 > GTLAdditions é um mod que adiciona novas receitas e máquinas ao `GregTech Leisure`
-> 
 > Você pode carregá-lo no seu GTL com o core **mais recente**!
-> 
 > ***Siga o contrato de licença se você não quiser se tornar um babaca***
 
 ## Introdução
