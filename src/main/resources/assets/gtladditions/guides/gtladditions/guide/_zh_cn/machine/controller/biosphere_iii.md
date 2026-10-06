@@ -1,6 +1,6 @@
 ---
 navigation:
-  title: 生态圈3号
+  title: 生物圈 III
   icon: biosphere_iii
   parent: controller/multiblock_controller.md
   position: 10
@@ -9,7 +9,7 @@ item_ids:
   - garden_of_hermes
 ---
 
-# 生态圈3号
+# 生物圈 III
 
 <Row>
 <BlockImage id = "biosphere_iii" scale = "4"/>
@@ -17,7 +17,7 @@ item_ids:
 <BlockImage id = "garden_of_hermes" scale = "4"/>
 </Row>
 
-> 本体电压每高于UEV一级模块的线程数+32 \
-> 默认输入1号编程电路开机 \
-> 模块允许使用<Color color="#00AA00">**UIV**</Color>等级以上的激光仓 \
-> 整合了温室配方和渔场配方，不需要修改配方类型就能全部处理 ([复合配方](../multi_type.md)) 
+> 每超过 UEV 一级主机等级，模块线程数增加 32 \
+> 默认情况下，系统使用编程电路 1 启动 \
+> 允许使用功率为 <Color color="#00AA00">**UIV**</Color> 或更高的激光仓 \
+> 集成了温室和渔场配方，无需更改配方类型即可处理所有配方（[多配方类型](../multi_type.md)）

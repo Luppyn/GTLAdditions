@@ -1,6 +1,6 @@
 ---
 navigation:
-  title: 浮光号深空工业舰
+  title: 浮光深空工业舰
   icon: floating_light_deep_space_industrial_vessel
   parent: controller/multiblock_controller.md
   position: 10
@@ -13,7 +13,7 @@ item_ids:
   - floating_light_deep_space_industrial_vessel_module_5
 ---
 
-# 浮光号深空工业舰
+# 浮光深空工业舰
 
 <Row>
     <BlockImage id = "floating_light_deep_space_industrial_vessel_module_1" scale = "3"/>
@@ -29,8 +29,7 @@ item_ids:
     <BlockImage id = "floating_light_deep_space_industrial_vessel" scale = "6"/>
 </Row>
 
-* 浮光号深空工业舰下辖的五种高度集成化的工业模块能以极其高效的方式处理配方
-* 本体电压每高于UIV一级模块的耗能与耗时均乘以0.9
-* 默认输入1号编程电路开机，输入2号编程电路后额外输入<FluidLink id="gtceu:raw_star_matter_plasma" />将模块的线程数增加至256，消耗量为1B/s
-* 拥有[复合配方类型](../multi_type.md), 不需要频繁地切换配方类型
-
+* 浮光深空工业舰上搭载的五个高度集成工业模块能够以极高的效率处理配方
+* 每高于 UIV 一级，模块的能耗与处理时间均乘以 0.9
+* 默认情况下，系统使用编程电路 1 启动。加载编程电路 2 后，额外输入 <FluidLink id="gtceu:raw_star_matter_plasma" /> 可将模块内的线程数提升至 256，消耗速率为 1B/s。
+* 支持 [多配方类型](../multi_type.md)，无需频繁切换配方类型

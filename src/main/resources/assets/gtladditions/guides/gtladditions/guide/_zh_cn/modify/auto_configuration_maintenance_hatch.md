@@ -1,6 +1,6 @@
 ---
 navigation:
-  title: 可配置自动维护仓的相关修改方面
+  title: 关于自动配置维护修改
   parent: modify/modify_index.md
   position: 7
 item_ids:
@@ -14,7 +14,7 @@ item_ids:
   - gtceu:law_cleaning_gravity_configuration_maintenance_hatch
 ---
 
-# 可配置自动维护仓的相关修改方面
+# 关于自动配置维护修改
 
 <Row>
     <BlockImage id = "gtceu:auto_configuration_maintenance_hatch" scale = "4" /> 
@@ -36,7 +36,7 @@ item_ids:
     <BlockImage id = "gtceu:law_cleaning_gravity_configuration_maintenance_hatch" scale = "4" />
 </Row>
 
-* 这个系列的维护仓现在可以被多方块结构共用了, 且可以放入不同的电路主机获得更大的处理耗时调整范围
-> 生物活性处理器主机: 上限3.0x, 下限0.15x \
-> 寰宇处理器主机: 上限7.5x, 下限0.1x \
-> 创造主机: 上限25.0x, 下限0.05x
+* 这一系列维护仓现在可以被多方块结构共享，并且可以容纳不同的电路主机以获得更广泛的处理时间调整
+> 生物群系主机：上限 3.0x，下限 0.15x \
+> 宇宙主机：上限 7.5x，下限 0.1x \
+> 超时空主机复合体：上限 25.0x，下限 0.05x

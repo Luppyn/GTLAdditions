@@ -1,13 +1,13 @@
 ---
 navigation:
-  title: 量子操纵者相关配方
+  title: 关于QFT配方
   parent: recipe/recipe_index.md
   position: 7
 item_ids:
   - gtceu:qft
 ---
 
-# 量子操纵者相关配方
+# 关于QFT配方
 
 <Row>
 <Recipe id="gtladditions:qft/resonating_gem" />

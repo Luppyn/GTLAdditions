@@ -1,6 +1,6 @@
 ---
 navigation:
-  title: 创造之门与创造聚合仪的相关修改
+  title: 关于创造之门与创造聚合器的修改
   parent: modify/modify_index.md
   position: 7
 item_ids:
@@ -8,7 +8,7 @@ item_ids:
   - gtceu:create_aggregation
 ---
 
-# 创造之门与创造聚合仪的相关修改
+# 关于创造之门与创造聚合器的修改
 
 <Row>
     <BlockImage id = "gtceu:door_of_create" scale = "4" />
@@ -16,22 +16,22 @@ item_ids:
     <BlockImage id = "gtceu:create_aggregation" scale = "4" />
 </Row>
 
-* 可以通过安装 <ItemLink id="gtladditions:me_block_conservation" /> 来转换
-* 在输入总线中选择24号编程电路即可运行转换
-* 只能在主机中放入**极限转换卡**, 放入后获得并行加成, 未放入同样无法正常工作
-* 创造之门: 65536并行; 创造聚合仪: 8192并行
-* 需要手持 <ItemLink id="gtceu:creative_data_access_hatch" /> 右键**嬗变总线**安装才能正常使用
-* 有关**嬗变总线**其余使用方法与 <ItemLink id="gtladditions:atomic_transmutation_core" /> 类似
-* 输入总线中选择1号编程电路则为原版方式
+* 可通过安装 <ItemLink id="gtladditions:me_block_conservation" /> 进行转换
+* 在输入总线中选择电路 24 以运行转换
+* 机器中只能放置 **终极转换卡**，它提供并行加成。没有它机器将无法工作
+* 创造之门：65536 并行；创造聚合器：8192 并行
+* 手持 <ItemLink id="gtceu:creative_data_access_hatch" /> 并右键点击 **嬗变总线** 进行安装以正常运行
+* **嬗变总线** 的其他使用方法与 <ItemLink id="gtladditions:atomic_transmutation_core" /> 类似
+* 在输入总线中选择电路 1 以进入原版模式
 
-### 创造之门转换配方
+### 创造之门配方
 <Row>
     <Recipe id="gtladditions:transmutation_block_conversion/tagprefix.block" />
 
     <Recipe id="gtladditions:transmutation_block_conversion/block.minecraft.command_block" />
 </Row>
 
-### 创造聚合仪转换配方
+### 创造聚合器配方
 <Row>
     <Recipe id="gtladditions:transmutation_block_conversion/block.minecraft.chain_command_block" />
 

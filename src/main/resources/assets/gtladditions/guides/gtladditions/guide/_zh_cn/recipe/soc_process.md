@@ -1,6 +1,6 @@
 ---
 navigation:
-  title: Soc产线
+  title: Soc 生产线
   parent: recipe/recipe_index.md
   position: 7
 item_ids:
@@ -32,12 +32,12 @@ item_ids:
   - gtladditions:primary_soc
 ---
 
-# Soc产线
+# Soc 生产线
 
-> 在GTLAdditions中, 添加了一条新的产线, 补充完整了原版的Soc电路等级 \
-> Soc电路指: 使用Soc芯片简化电路组装机合成的电路, 大多数时候都较大程度地减少了合成电路的步骤与材料 
+> 在 GTLAdditions 中，新增了一条生产线以补全原有的 Soc 电路等级 \
+> Soc 电路指：使用 Soc 芯片合成的电路，用于简化电路组装机，在大多数情况下能显著减少电路合成的步骤与材料
 
-### 单晶硅
+### 晶棒
 
 <Row>
   <ItemImage id="gtladditions:echo_shard_boule" scale="4" />
@@ -51,9 +51,8 @@ item_ids:
   <ItemImage id="gtladditions:infinity_boule" scale="4" />
 </Row>
 
-* 在制作这些单晶硅之前, 你需要一种新的化合物 <ItemLink id="gtladditions:gallium_oxide_dust" /> 
-* 使用这个化合物, 再加入**单晶硅**和对应的粉, 通入氪在电力高炉中处理便可以得到对应的单晶硅
-
+* 在制作这些晶棒之前，你需要一种新的化合物 <ItemLink id="gtladditions:gallium_oxide_dust" />
+* 使用该化合物，加入**晶棒**与对应的粉，然后在电力高炉中用氪进行处理，即可获得对应的晶棒
 
 ### 晶圆
 
@@ -69,11 +68,10 @@ item_ids:
   <ItemImage id="gtladditions:infinity_wafer" scale="4" />
 </Row>
 
-* 将上一步获得的单晶硅放入切割机中切割后便可得到对应的晶圆
-* **特别的**, <ItemLink id="gtladditions:periodicium_wafer" /> 可以在**激光蚀刻机**中用于制作其他晶圆
+* 将上一步获得的晶棒在切割机中切割，即可获得对应的晶圆
+* **特殊**，<ItemLink id="gtladditions:periodicium_wafer" /> 可在**雕刻阵列**中用于制作其他晶圆
 
-
-### 处理后的晶圆
+### 加工晶圆
 
 <Row>
   <ItemImage id="gtladditions:bioware_echo_shard_wafer" scale="4" />
@@ -87,10 +85,9 @@ item_ids:
   <ItemImage id="gtladditions:prepare_primary_soc_wafer" scale="4" />
 </Row>
 
-* 将上一步获得的单晶硅再经过一个特殊的处理, 可以得到一种性能更好(?)的晶圆
+* 上一步获得单晶硅可通过特殊处理，以获得性能更佳(?)的晶圆
 
-
-### Soc晶圆
+### Soc 晶圆
 
 <Row>
   <ItemImage id="gtladditions:outstanding_soc_wafer" scale="4" />
@@ -104,10 +101,9 @@ item_ids:
   <ItemImage id="gtladditions:primary_soc_wafer" scale="4" />
 </Row>
 
-* 再处理后的晶圆放入**维度聚焦激光蚀刻机**中后就能得到Soc晶圆了
+* 将加工晶圆放入**维度聚焦激光蚀刻机**，即可获得 Soc 晶圆
 
-
-### Soc芯片
+### Soc 芯片
 
 <Row>
   <ItemImage id="gtladditions:outstanding_soc" scale="4" />
@@ -121,10 +117,4 @@ item_ids:
   <ItemImage id="gtladditions:primary_soc" scale="4" />
 </Row>
 
-* Soc晶圆再放入切割机中切割一次, 恭喜你, 获得了Soc芯片, 可以简化不少电路合成配方 ~~(原初Soc芯片: ?)~~
-
-
-
-
-
-
+* 将 Soc 晶圆再次放入切割机，恭喜你，你获得了 Soc 芯片，它可以简化许多电路配方 ~~(初级 Soc 芯片：？)~~

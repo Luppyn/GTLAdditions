@@ -1,26 +1,24 @@
 ---
 navigation:
-  title: GTLAdditions配方
+  title: GTLAdditions 配方
   position: 3
 ---
 
-# 关于GTLAdditions配方
+# 关于 GTLAdditions 配方
 
-> GTLAdditions针对原版的`GregTech Leisure`添加了一部分简化配方 \
-> <Color color="#FF0000">**在此次仅给出配方的部分内容, 具体的配方信息请查看jei!!!**</Color> \
-> <Color color="#FF0000">**在此次仅给出配方的部分内容, 具体的配方信息请查看jei!!!**</Color> \
-> <Color color="#FF0000">**在此次仅给出配方的部分内容, 具体的配方信息请查看jei!!!**</Color>
+> GTLAdditions 为原版 `GregTech Leisure` 添加了一些简化配方 \
+> <Color color="#FF0000">**此处仅展示部分配方内容，具体配方信息请查看 JEI！！！**</Color> \
+> <Color color="#FF0000">**此处仅展示部分配方内容，具体配方信息请查看 JEI！！！**</Color> \
+> <Color color="#FF0000">**此处仅展示部分配方内容，具体配方信息请查看 JEI！！！**</Color>
 
-* [AE2配方](ae2_recipe.md)
+* [AE2 配方](ae2_recipe.md)
 * [组装机配方](assembler_recipe.md)
-* [深度化学扭曲仪配方](distort_recipe.md)
-* [量子操纵者配方](qft_recipe.md)
+* [化学扭曲仪配方](distort_recipe.md)
+* [QFT 配方](qft_recipe.md)
 * [集成矿石处理配方](integratedted_ore_processor_recipe.md)
-* [更多流体配方](extended_fluid_recipe.md)
-* [其他配方杂项](others_recipe.md)
+* [扩展流体配方](extended_fluid_recipe.md)
+* [其他配方](others_recipe.md)
 
-### 新产线
+### 新生产线
 
-* [Soc 产线](soc_process.md)
-
-
+* [SoC 生产线](soc_process.md)

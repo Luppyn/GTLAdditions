@@ -1,13 +1,13 @@
 ---
 navigation:
-  title: 深度化学扭曲仪相关配方
+  title: 关于化学扭曲仪配方
   parent: recipe/recipe_index.md
   position: 7
 item_ids:
   - gtceu:chemical_distort
 ---
 
-# 深度化学扭曲仪相关配方
+# 关于化学扭曲仪配方
 
 <Row>
 <Recipe id="gtladditions:distort/rare_earth_dust_monazite" />

@@ -1,6 +1,6 @@
 ---
 navigation:
-  title: 其他配方杂项
+  title: 其他配方
   parent: recipe/recipe_index.md
   position: 7
 item_ids:
@@ -18,7 +18,7 @@ item_ids:
   - gtceu:magic_manufacturer
 ---
 
-# 其他配方杂项
+# 其他配方
 
 <Recipe id="gtladditions:electric_blast_furnace/magnesium_chloride_dust" />
 

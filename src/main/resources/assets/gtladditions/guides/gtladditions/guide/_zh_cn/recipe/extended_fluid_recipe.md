@@ -1,6 +1,6 @@
 ---
 navigation:
-  title: 更多流体相关配方
+  title: 扩展流体配方
   parent: recipe/recipe_index.md
   position: 7
 item_ids:
@@ -44,16 +44,16 @@ item_ids:
   - gtceu:long_neptunium_rod
 ---
 
-# 更多流体相关配方
->在GTLAdditions中，为钌铱合金添加了<FluidLink id="gtladditions:molten_ruridit" />和<FluidLink id="gtladditions:liquid_ruridit" />，以及一系列相关配方
+# 扩展流体配方
+>在 GTLAdditions 中，为 Ruridit 添加了 <FluidLink id="gtladditions:molten_ruridit" />和<FluidLink id="gtladditions:liquid_ruridit" />，以及一系列相关配方
 
 <Row>
 <Recipe id="gtladditions:alloy_blast_smelter/ruridit" />
 <Recipe id="gtladditions:alloy_blast_smelter/ruridit_gas" />
 </Row>
 
-同时还有一系列提取机和流体固化器配方以及对应的分子解构和混沌炼金配方
+此外还有一系列提取机和流体固化机配方，以及相应的分子重构和混沌炼金配方
 
->在GTLAdditions中，为锗、铼、锝添加了对应的流体形式
+>在 GTLAdditions 中，为锗、铼和锝添加了流体形式
 > 
->同时镎也获得了锭形式以及一些衍生形式
+>同时，镎也以锭形式和多种衍生形式获得

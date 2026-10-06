@@ -1,19 +1,17 @@
 ---
 navigation:
-  title: Index/开始
+  title: 索引/开始
   position: 0
 ---
 
-# 关于GTLAdditions
+# 关于 GTLAdditions
 
-
-本模组基于`GregTech Leisure`进行开发。
-基于该整合包，本模组添加了许多新的多方块结构、配方和机制，简化部分繁琐的内容，丰富了游戏玩法，提供了更好的游玩体验。
+本模组基于 `GregTech Leisure` 开发。
+在此整合包的基础上，加入了许多新的想法。
+在保留原有硬核科技框架的同时，
+融入了大量创新设计与平衡性优化，
+旨在为玩家带来更流畅、更具策略性的自动化体验。
 
 * [GTLAdditions 机器](machine/machine_index.md)
 * [GTLAdditions 配方](recipe/recipe_index.md)
-* [GTLAdditions 魔改](modify/modify_index.md)
-
-
-
-
+* [GTLAdditions 修改](modify/modify_index.md)

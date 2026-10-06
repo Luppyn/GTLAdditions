@@ -1,20 +1,22 @@
 ---
 navigation:
-  title: GTLAdditions机器
+  title: GTLAdditions 机器
   position: 3
 ---
 
-# 关于GTLAdditions机器
+# 关于 GTLAdditions 机器
 
-## 机器仓室
+GTLAdditions 机器介绍
 
-<CategoryIndex category="机器仓室" />
+## 机器部件仓
 
-## 多方块结构主机
+<CategoryIndex category="machine part hatch" />
 
-<CategoryIndex category="多方块结构主机" />
+## 多方块控制器
+
+<CategoryIndex category="multiblock controller" />
 
 ### 一些机制
 
-* [GTLAdditions机器配置](add_machine_config.md)
-* [复合配方类型](multi_type.md)
+* [GTLAdditions 机器配置](add_machine_config.md)
+* [多配方类型](multi_type.md)

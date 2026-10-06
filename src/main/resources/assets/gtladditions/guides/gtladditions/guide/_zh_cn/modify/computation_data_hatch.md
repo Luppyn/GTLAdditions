@@ -1,6 +1,6 @@
 ---
 navigation:
-  title: 无线光学(算力)数据仓的相关修改方面
+  title: 关于无线数据（算力）仓的修改
   parent: modify/modify_index.md
   position: 7
 item_ids:
@@ -10,7 +10,7 @@ item_ids:
   - gtceu:wireless_data_receiver_hatch
 ---
 
-# 无线光学(算力)数据仓的相关修改方面
+# 关于无线数据（算力）仓的修改
 
 <Row>
     <BlockImage id = "gtmthings:wireless_computation_transmitter_hatch" scale = "4" /> 
@@ -22,6 +22,5 @@ item_ids:
     <BlockImage id = "gtceu:wireless_data_receiver_hatch" scale = "4" />
 </Row>
 
-* 这四个仓室现在可以被多方块结构共用了
-* ~~但是共用无线算力源仓并不能让算力都从这个源仓输出~~
-
+* 现在这四个仓可以被多方块结构共享
+* ~~不过，共享无线算力发送仓并不意味着所有算力都从该来源池输出~~

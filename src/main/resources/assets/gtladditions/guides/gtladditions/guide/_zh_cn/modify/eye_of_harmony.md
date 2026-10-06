@@ -1,6 +1,6 @@
 ---
 navigation:
-  title: 鸿蒙之眼的相关修改
+  title: 关于和谐之眼修改
   parent: modify/modify_index.md
   position: 7
 item_ids:
@@ -8,7 +8,7 @@ item_ids:
   - gtladditions:create_data
 ---
 
-# 鸿蒙之眼的相关修改
+# 关于和谐之眼修改
 
 <Row>
     <BlockImage id = "gtceu:eye_of_harmony" scale = "4" />
@@ -16,7 +16,7 @@ item_ids:
     <BlockImage id = "arcanic_astrograph" scale = "4" />
 </Row>
 
-* 在主机中放入<ItemLink id="gtladditions:create_data" /> 可将所有产物转换为1,572,864mB<FluidLink id="gtceu:raw_star_matter_plasma" />的输出
+* 将 <ItemLink id="gtladditions:create_data" /> 放入主机后，所有产物将转化为 1,572,864 mB 的 <FluidLink id="gtceu:raw_star_matter_plasma" /> 输出
 
-* 与此同时鸿蒙之眼和奥数星图的内部**氢氦**存储上限改为10MB
-* ~~不再会无休止的偷吃你的氢氦了~~
+* 同时，和谐之眼与奥术星图的内部**氢**和**氦**存储上限已改为 10MB
+* ~~不再无休止地消耗你的氢和氦~~

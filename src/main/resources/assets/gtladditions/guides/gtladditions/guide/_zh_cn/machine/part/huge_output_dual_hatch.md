@@ -1,6 +1,6 @@
 ---
 navigation:
-  title: 巨型输出总成
+  title: 巨型输出双仓
   icon: gtmthings:iv_huge_output_dual_hatch
   parent: part/machine_part_index.md
   position: 10
@@ -20,7 +20,7 @@ item_ids:
   - gtmthings:opv_huge_output_dual_hatch
 ---
 
-# 巨型输出总成
+# 巨型输出双仓
 
 <Row>
     <BlockImage id="gtmthings:lv_huge_output_dual_hatch" scale="4" />
@@ -52,4 +52,4 @@ item_ids:
     <BlockImage id="gtmthings:uxv_huge_output_dual_hatch" scale="4" />
 </Row>
 
-* 将巨型输出总线与巨型输出仓整合到一起的仓室，类似于巨型输入总成
+* 一种将巨型输出总线与巨型输出仓结合在一起的仓，类似于巨型输入总线

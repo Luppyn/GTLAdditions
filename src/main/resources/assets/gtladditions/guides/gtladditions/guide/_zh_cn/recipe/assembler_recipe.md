@@ -1,6 +1,6 @@
 ---
 navigation:
-  title: 组装机相关配方
+  title: 关于组装机配方
   parent: recipe/recipe_index.md
   position: 7
 item_ids:
@@ -10,7 +10,7 @@ item_ids:
   - kubejs:quantum_chromodynamic_charge
 ---
 
-# 组装机相关配方
+# 关于组装机配方
 
 <Row>
 <Recipe id="gtladditions:assembler/naquadria_charge_more" />
