@@ -59,7 +59,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore(i18n): sincronizar traducoes en_us <-> zh_cn via DeepSeek"
+          git commit -m "chore(i18n): sincronizar en_us <-> zh_cn e gerar pt_br via DeepSeek"
           git push origin HEAD:master
 
   build-release:
@@ -122,7 +122,7 @@ jobs:
           tag_name: ${{ needs.translate.outputs.tag }}
           name: GTLAdditions ${{ needs.translate.outputs.version }} (build ${{ github.run_number }})
           body: |
-            Build automatica apos sincronizacao de traducoes (en_us <-> zh_cn) via DeepSeek.
+            Build automatica apos sincronizacao de traducoes (en_us <-> zh_cn -> pt_br) via DeepSeek.
 
             - Commit: ${{ github.sha }}
             - Trigger: ${{ github.event_name }}
