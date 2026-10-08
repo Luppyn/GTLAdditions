@@ -12,5 +12,5 @@ item_ids:
 
 <BlockImage id = "inferno_cleft_smelting_vault" scale = "8"/>
 
-> Integra as receitas do Pirólisador e do Craqueador, podendo processar todas elas sem trocar o tipo de receita ([Tipos Múltiplos de Receita](../multi_type.md)) \
+> Integra as receitas do Pirólisador e do Craqueador, podendo processar todas elas sem trocar o tipo de receita ([Tipos de Receita Múltiplos](../multi_type.md)) \
 > ~~A eficiência é capaz de deixar o Pirólisador Grande e o Craqueador Grande comendo poeira~~

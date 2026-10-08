@@ -17,8 +17,8 @@ item_ids:
     <BlockImage id = "nebula_reaper" scale = "4"/>
 </Row>
 
-* O overclock do Modo Extremo do Nebula Reaper não é um overclock perfeito
-* Possui bônus de redução de tempo com multiplicador de 0.8^(tier de voltagem do elevador espacial conectado - 8)
-* Contagem de paralelos: n^(tier do módulo do elevador espacial conectado - 1), ao conectar ao Elevador Espacial, n = 8; ao conectar ao Elevador Espacial MKII, n = 12
+* O overclock do Modo Extremo do Ceifador de Nebulosas não é um overclock perfeito
+* Possui bônus de redução de tempo com multiplicador de 0.8^(nível de voltagem do elevador espacial conectado - 8)
+* Contagem de paralelos: n^(nivel do módulo do elevador espacial conectado - 1), ao conectar ao Elevador Espacial, n = 8; ao conectar ao Elevador Espacial MKII, n = 12
 * Permite processamento paralelo entre receitas
-* Permite a instalação de laser hatches para maior potência de entrada
+* Permite a instalação de escotilhas de laser para maior potência de entrada

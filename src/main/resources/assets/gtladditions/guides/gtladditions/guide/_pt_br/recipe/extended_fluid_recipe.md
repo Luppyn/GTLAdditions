@@ -52,7 +52,7 @@ item_ids:
 <Recipe id="gtladditions:alloy_blast_smelter/ruridit_gas" />
 </Row>
 
-Além disso, há uma série de receitas de Extractor e Fluid Solidifier, junto com as receitas correspondentes de Molecular Deconstruction e Chaotic Alchemy
+Além disso, há uma série de receitas de Extrator e Solidificador de Fluidos, junto com as receitas correspondentes de Desconstrução Molecular e Alquimia Caótica
 
 >No GTLAdditions, formas fluidas foram adicionadas para germânio, rênio e tecnécio 
 > 

@@ -1,13 +1,13 @@
 ---
 navigation:
-  title: Sobre a Recipe de QFT
+  title: Sobre a Receita de QFT
   parent: recipe/recipe_index.md
   position: 7
 item_ids:
   - gtceu:qft
 ---
 
-# Sobre a Recipe de QFT
+# Sobre a Receita de QFT
 
 <Row>
 <Recipe id="gtladditions:qft/resonating_gem" />

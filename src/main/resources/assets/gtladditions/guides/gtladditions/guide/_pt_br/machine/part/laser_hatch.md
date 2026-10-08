@@ -1,6 +1,6 @@
 ---
 navigation:
-  title: Hatch Laser
+  title: Escotilha de Laser
   icon: gtmthings:luv_16777216a_wireless_laser_source_hatch
   parent: part/machine_part_index.md
   position: 10
@@ -15,7 +15,7 @@ item_ids:
   - gtceu:opv_67108863a_laser_target_hatch
 ---
 
-# Hatch Laser
+# Escotilha de Laser
 
 <Row>
     <BlockImage id="gtmthings:luv_16777216a_wireless_laser_source_hatch" scale="4" />
@@ -37,6 +37,6 @@ item_ids:
     <BlockImage id="gtceu:opv_67108863a_laser_target_hatch" scale="4" />
 </Row>
 
-* Adicionadas hatches laser de maior potência: **16777216**A e **67108864**(**3**)A
-* Podem fazer suas máquinas rodarem mais rápido (~~Pode drenar sua rede de energia sem fio devido ao grande buffer da hatch laser?~~)
-* ~~O motivo pelo qual a hatch laser de origem é 67108863 em vez de 67108864 é que exceder o limite do tipo long faz com que ela se torne negativa~~
+* Adicionadas escotilhas de laser de maior potência: **16777216**A e **67108864**(**3**)A
+* Podem fazer suas máquinas rodarem mais rápido (~~Pode drenar sua rede de energia sem fio devido ao grande buffer da escotilha de laser?~~)
+* ~~O motivo pelo qual a escotilha de fonte de laser é 67108863 em vez de 67108864 é que exceder o limite do tipo long faz com que ela se torne negativa~~

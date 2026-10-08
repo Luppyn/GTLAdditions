@@ -1,6 +1,6 @@
 ---
 navigation:
-  title: Huge Output Dual Hatch
+  title: Escotilha Dupla de Saída Gigante
   icon: gtmthings:iv_huge_output_dual_hatch
   parent: part/machine_part_index.md
   position: 10
@@ -20,7 +20,7 @@ item_ids:
   - gtmthings:opv_huge_output_dual_hatch
 ---
 
-# Huge Output Dual Hatch
+# Escotilha Dupla de Saída Gigante
 
 <Row>
     <BlockImage id="gtmthings:lv_huge_output_dual_hatch" scale="4" />
@@ -52,4 +52,4 @@ item_ids:
     <BlockImage id="gtmthings:uxv_huge_output_dual_hatch" scale="4" />
 </Row>
 
-* Uma Hatch que combina o Huge Output Bus e a Huge Output Hatch, semelhante ao Huge Input Bus
+* Uma escotilha que combina o barramento de saída gigante e a escotilha de saída gigante, semelhante ao barramento de entrada gigante

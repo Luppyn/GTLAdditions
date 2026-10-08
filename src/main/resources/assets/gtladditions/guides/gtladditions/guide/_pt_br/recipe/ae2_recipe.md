@@ -1,13 +1,13 @@
 ---
 navigation:
-  title: Sobre a Recipe de AE2
+  title: Sobre a Receita de AE2
   parent: recipe/recipe_index.md
   position: 7
 item_ids:
   - gtceu:matter_fabricator
 ---
 
-# Sobre a Recipe de AE2
+# Sobre a Receita de AE2
 
 <Row>
 <Recipe id="gtladditions:matter_fabricator/singularity_1" />

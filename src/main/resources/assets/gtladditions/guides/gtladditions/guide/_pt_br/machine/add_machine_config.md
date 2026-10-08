@@ -18,10 +18,10 @@ O número padrão de threads para a maioria das máquinas do GTLAdditions é 128
 
 ## **Modo Extremo**
 
-> No Modo Extremo, a máquina se concentrará em processar uma parte das receitas, com overclock sem perdas e 1toc (para os conceitos de overclock sem perdas e 1toc, consulte o livro de tarefas)\
+> No Modo Extremo, a máquina se concentrará em processar uma parte das receitas, com overclock sem perdas e 1toc (para conceitos de overclock sem perdas e 1toc, consulte o livro de tarefas)\
 > Neste modo, o bônus da Manutenção Configurável não terá efeito \
 > Neste modo, o número de threads é o número máximo de receitas que podem ser processadas \
-> Este modo habilita automaticamente o processamento em lote e não pode ser desabilitado \
+> Este modo ativa automaticamente o processamento em lote e não pode ser desativado \
 > A menos que especificado de outra forma ou fornecido por um mecanismo específico, a operação das máquinas do GTLAdditions que não são máquinas paralelas entre receitas também segue o mesmo mecanismo do modo extremo
 
 * Você pode selecionar o modo padrão na configuração do mod. O modo padrão inicial é o **Modo de Divisão Igualitária**.
@@ -29,5 +29,5 @@ O número padrão de threads para a maioria das máquinas do GTLAdditions é 128
 #### **Configuração de Duração Limite para Receita**
 
 > O botão pode ser aberto no canto inferior esquerdo da GUI de algumas máquinas do GTLAdditions para ajustar o valor padrão inicial. \
-> O valor padrão inicial é 1 segundo. Ele varia de 5 tick (mínimo) a 10 segundos (máximo). \
+> O valor padrão inicial é 1 segundo. Ele varia de 5 ticks (mínimo) a 10 segundos (máximo). \
 > O valor padrão também pode ser modificado no arquivo de configuração do mod.

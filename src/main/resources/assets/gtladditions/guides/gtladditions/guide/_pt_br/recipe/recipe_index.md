@@ -6,10 +6,10 @@ navigation:
 
 # Sobre as Receitas do GTLAdditions
 
-> O GTLAdditions adiciona algumas receitas simplificadas para o `GregTech Leisure` original \
-> <Color color="#FF0000">**Apenas parte do conteúdo das receitas é mostrado aqui, consulte o JEI para informações específicas sobre as receitas!!!**</Color> \
-> <Color color="#FF0000">**Apenas parte do conteúdo das receitas é mostrado aqui, consulte o JEI para informações específicas sobre as receitas!!!**</Color> \
-> <Color color="#FF0000">**Apenas parte do conteúdo das receitas é mostrado aqui, consulte o JEI para informações específicas sobre as receitas!!!**</Color>
+> O GTLAdditions adiciona algumas receitas simplificadas ao `GregTech Leisure` original \
+> <Color color="#FF0000">**Apenas parte do conteúdo das receitas é mostrada aqui, consulte o JEI para informações específicas sobre as receitas!!!**</Color> \
+> <Color color="#FF0000">**Apenas parte do conteúdo das receitas é mostrada aqui, consulte o JEI para informações específicas sobre as receitas!!!**</Color> \
+> <Color color="#FF0000">**Apenas parte do conteúdo das receitas é mostrada aqui, consulte o JEI para informações específicas sobre as receitas!!!**</Color>
 
 * [Receita de AE2](ae2_recipe.md)
 * [Receita da Máquina de Montagem](assembler_recipe.md)

@@ -34,7 +34,7 @@ item_ids:
 
 # Linha de Produção de Soc
 
-> No GTLAdditions, uma nova linha de produção foi adicionada para completar os níveis originais de circuitos Soc \
+> No GTLAdditions, uma nova linha de produção foi adicionada para completar os níveis originais de circuito Soc \
 > Circuitos Soc referem-se a: circuitos sintetizados usando chips Soc para simplificar a máquina de montagem de circuitos, o que na maioria dos casos reduz significativamente as etapas e materiais para a síntese de circuitos
 
 ### Lingote
@@ -52,7 +52,7 @@ item_ids:
 </Row>
 
 * Antes de fabricar esses lingotes, você precisa de um novo composto <ItemLink id="gtladditions:gallium_oxide_dust" />
-* Use este composto, adicione o **Lingote** e o pó correspondente, depois processe-o em um Forno de Alta Temperatura Elétrico com criptônio para obter o lingote correspondente
+* Use este composto, adicione o **Lingote** e o pó correspondente, depois processe-o em um Alto-Forno Elétrico com criptônio para obter o lingote correspondente
 
 ### Wafer
 

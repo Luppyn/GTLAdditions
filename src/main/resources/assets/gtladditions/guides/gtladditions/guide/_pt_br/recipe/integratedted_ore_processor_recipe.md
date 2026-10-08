@@ -10,7 +10,7 @@ item_ids:
 
 # Sobre a Receita do Processador de Minério Integrado
 
-Receita do <ItemLink id="gtceu:integrated_ore_processor" />
+<ItemLink id="gtceu:integrated_ore_processor" /> Receita
 
 * ### Receita Nº1
 > Receita de Circuito 24, entrada <ItemLink id="gtceu:jasper_ore" />, pode obter diretamente <ItemLink id="gtceu:raw_tengam_dust" /> \
@@ -22,4 +22,4 @@ Receita do <ItemLink id="gtceu:integrated_ore_processor" />
 > Pode obter diretamente os minérios purificados correspondentes (produtos obtidos através do macerador e da lavadora de minério) \
 > Simplifica ligeiramente a linha de processamento de platina \
 > ~~Minérios brutos também podem ser usados para obter os produtos correspondentes~~ \
-> ~~(Calcocita não tem receita de Circuito 9)~~
+> ~~(Calcosita não tem receita de Circuito 9)~~

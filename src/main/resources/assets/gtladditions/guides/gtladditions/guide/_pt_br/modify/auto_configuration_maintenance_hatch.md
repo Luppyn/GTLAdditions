@@ -1,6 +1,6 @@
 ---
 navigation:
-  title: Sobre a Modificação de Manutenção com Configuração Automática
+  title: Sobre a Modificação de Manutenção de Configuração Automática
   parent: modify/modify_index.md
   position: 7
 item_ids:
@@ -14,7 +14,7 @@ item_ids:
   - gtceu:law_cleaning_gravity_configuration_maintenance_hatch
 ---
 
-# Sobre a Modificação de Manutenção com Configuração Automática
+# Sobre a Modificação de Manutenção de Configuração Automática
 
 <Row>
     <BlockImage id = "gtceu:auto_configuration_maintenance_hatch" scale = "4" /> 
@@ -36,7 +36,7 @@ item_ids:
     <BlockImage id = "gtceu:law_cleaning_gravity_configuration_maintenance_hatch" scale = "4" />
 </Row>
 
-* Esta série de hatches de manutenção agora pode ser compartilhada por estruturas multibloco, e pode acomodar diferentes mainframes de circuito para obter uma gama mais ampla de ajustes no tempo de processamento
+* Esta série de escotilhas de manutenção agora pode ser compartilhada por estruturas multibloco, e pode acomodar diferentes mainframes de circuito para obter uma gama mais ampla de ajustes no tempo de processamento
 > Mainframe Bioware: Limite superior 3.0x, Limite inferior 0.15x \
 > Mainframe Cósmico: Limite superior 7.5x, Limite inferior 0.1x \
 > Complexo de Mainframe Suprachronal: Limite superior 25.0x, Limite inferior 0.05x

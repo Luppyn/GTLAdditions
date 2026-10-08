@@ -1,6 +1,6 @@
 ---
 navigation:
-  title: Sobre a Recipe da Assembler
+  title: Sobre a Receita da Máquina de Montagem
   parent: recipe/recipe_index.md
   position: 7
 item_ids:
@@ -10,7 +10,7 @@ item_ids:
   - kubejs:quantum_chromodynamic_charge
 ---
 
-# Sobre a Recipe da Assembler
+# Sobre a Receita da Máquina de Montagem
 
 <Row>
 <Recipe id="gtladditions:assembler/naquadria_charge_more" />

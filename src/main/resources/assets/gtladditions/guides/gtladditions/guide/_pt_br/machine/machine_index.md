@@ -8,15 +8,15 @@ navigation:
 
 Introdução à Máquina GTLAdditions
 
-## Hatch de Componente de Máquina
+## Escotilha de Componente de Máquina
 
 <CategoryIndex category="machine part hatch" />
 
-## Controlador de Multiblock
+## Controlador de Multibloco
 
 <CategoryIndex category="multiblock controller" />
 
 ### Alguns mecanismos
 
-* [Configuração de Máquina GTLAdditions](add_machine_config.md)
+* [Configuração da Máquina GTLAdditions](add_machine_config.md)
 * [Tipos de Múltiplas Receitas](multi_type.md)

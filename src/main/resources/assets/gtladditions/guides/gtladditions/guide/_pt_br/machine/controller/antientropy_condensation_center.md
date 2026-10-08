@@ -18,4 +18,4 @@ item_ids:
 
 * Você pode segurar <ItemLink id="kubejs:create_ultimate_battery" /> e clicar com o botão direito para inserir uma na máquina e obter os seguintes bônus adicionais:
 * Multiplicador de tempo: 0.7; Multiplicador de energia: 0.5
-* **Nota**: O efeito de bônus será redefinido se a máquina for removida, e a Bateria Ultimate Criativa não será devolvida
+* **Nota**: O efeito de bônus será redefinido se a máquina for removida e a Bateria Ultimate Criativa não será devolvida

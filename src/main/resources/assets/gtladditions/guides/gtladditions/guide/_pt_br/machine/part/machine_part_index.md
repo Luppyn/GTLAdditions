@@ -1,23 +1,23 @@
 ---
 navigation:
-  title: Peças de Máquina do GTLAdditions
+  title: Peça de Máquina GTLAdditions
   parent: machine/machine_index.md
   position: 5
 categories: 
 - machine part hatch
 ---
 
-# Sobre as Peças de Máquina do GTLAdditions
+# Sobre a Peça de Máquina GTLAdditions
 
-Introdução às Peças de Máquina do GTLAdditions
+Introdução à Peça de Máquina GTLAdditions
 
 <SubPages />
 
-* [Hatch de Entrada de Vapor Gigante](huge_steam_hatch_part_machine.md)
-* [Hatch Duplo de Super Entrada](super_input_dual_hatch.md)
-* [Hatch de Análise Espectral](spectral_analysis_hatch.md)
-* [Hatch de Barramento de Transmutação](me_block_conservation.md)
-* [Hatch Duplo de Saída Gigante](huge_output_dual_hatch.md)
-* [Hatch de Laser](laser_hatch.md)
+* [Escotilha de Entrada de Vapor Gigante](huge_steam_hatch_part_machine.md)
+* [Escotilha Dupla de Super Entrada](super_input_dual_hatch.md)
+* [Escotilha de Análise Espectral](spectral_analysis_hatch.md)
+* [Escotilha de Barramento de Transmutação](me_block_conservation.md)
+* [Escotilha Dupla de Saída Gigante](huge_output_dual_hatch.md)
+* [Escotilha de Laser](laser_hatch.md)
 * [Nó de Transcrição Vientiane](vientiane_transcription_node.md)
 * [Sistema de Computação em Nuvem/Dados](cloud_system.md)
