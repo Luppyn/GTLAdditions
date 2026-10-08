@@ -129,7 +129,7 @@ CONTEXT / GLOSSARY:
 
 STRICT RULES:
 1. The input is a JSON object mapping stable ids to objects like {{"en": "...", "zh": "..."}}.
-2. Return ONLY a JSON object with EXACTLY the same ids, values translated to pt_br.
+2. Return ONLY a JSON object with EXACTLY the same ids, each value being a plain STRING (the pt_br translation). Do NOT nest objects under each id. Do NOT wrap the result in another object such as {{"translations": ...}}.
 3. Keep every placeholder (%s, %1$s, %d), Minecraft formatting code (§ + char) and newline (\\n) exactly where they belong.
 4. Be consistent with the glossary and with the surrounding context lines provided in the user message.
 5. No commentary, no markdown fences — raw JSON only.
@@ -166,7 +166,7 @@ CONTEXT / GLOSSARY:
 
 STRICT RULES:
 1. The input JSON maps stable ids to fragments of ONE markdown page.
-2. Return ONLY a JSON object with the same ids, fragments translated to pt_br.
+2. Return ONLY a JSON object with the same ids, each value being a plain STRING (the translated fragment). Do NOT nest objects under each id. Do NOT wrap the result in another object such as {{"translations": ...}}.
 3. NEVER alter: HTML/GuideME tags (<Row>, <BlockImage id="..." scale="4"/>, <Color color="#00AA00">), attribute values, markdown link targets (file.md, ../x.md), inline code, item ids in snake_case, image paths.
 4. YAML front-matter fragments (ids starting with "fm:") contain only a `title:` line — translate just the title text, keep the YAML shape.
 5. Keep markdown structure characters (#, *, >, |, -, list markers) untouched. Hard line breaks (trailing backslash) must be kept.
@@ -234,6 +234,27 @@ def parse_json_response(raw: str) -> dict:
     return json.loads(raw[start : end + 1])
 
 
+def unwrap_translations(parsed: dict) -> dict:
+    """Desfaz wrappers comuns retornados pelo modelo, ex.: {"translations": {...}}."""
+    if len(parsed) == 1:
+        only = next(iter(parsed.values()))
+        if isinstance(only, dict):
+            return only
+    return parsed
+
+
+def extract_text(value) -> str | None:
+    """Extrai uma string de traducao de um valor que pode ser string ou objeto."""
+    if isinstance(value, str):
+        return value.strip() or None
+    if isinstance(value, dict):
+        for key in ("pt", "pt_br", "translation", "text", "value", "en", "zh"):
+            candidate = value.get(key)
+            if isinstance(candidate, str) and candidate.strip():
+                return candidate.strip()
+    return None
+
+
 def translate_map(pairs: dict[str, str], kind: str, direction: str, context: str) -> dict[str, str]:
     """Traduz {id: texto} em lotes; devolve {id: traducao}."""
     if not pairs:
@@ -248,10 +269,10 @@ def translate_map(pairs: dict[str, str], kind: str, direction: str, context: str
         user = json.dumps(batch, ensure_ascii=False, indent=1)
         if context:
             user = f"Surrounding context (do NOT translate):\n{context}\n\nTranslate:\n{user}"
-        translated = parse_json_response(deepseek_chat(system, user))
+        translated = unwrap_translations(parse_json_response(deepseek_chat(system, user)))
         for key in batch:
-            value = translated.get(key)
-            if not isinstance(value, str) or not value.strip():
+            value = extract_text(translated.get(key))
+            if not value:
                 print(f"[aviso] id '{key}' sem traducao; mantendo fonte", file=sys.stderr)
                 value = batch[key]
             out[key] = value
@@ -272,10 +293,10 @@ def translate_ptbr_map(entries: dict[str, dict[str, str]], context: str) -> dict
         user = json.dumps(batch, ensure_ascii=False, indent=1)
         if context:
             user = f"Surrounding context (do NOT translate):\n{context}\n\nTranslate:\n{user}"
-        translated = parse_json_response(deepseek_chat(system, user))
+        translated = unwrap_translations(parse_json_response(deepseek_chat(system, user)))
         for key in batch:
-            value = translated.get(key)
-            if not isinstance(value, str) or not value.strip():
+            value = extract_text(translated.get(key))
+            if not value:
                 print(f"[aviso] id '{key}' sem traducao pt_br; mantendo fonte", file=sys.stderr)
                 value = batch[key]["en"]
             out[key] = value
@@ -300,10 +321,10 @@ def translate_ptbr_md(fragments: dict[str, str], zh_text: str) -> dict[str, str]
                 "(for disambiguation; do NOT translate this reference):\n"
                 f"{zh_text}\n\nTranslate:\n{user}"
             )
-        translated = parse_json_response(deepseek_chat(system, user))
+        translated = unwrap_translations(parse_json_response(deepseek_chat(system, user)))
         for key in batch:
-            value = translated.get(key)
-            if not isinstance(value, str) or not value.strip():
+            value = extract_text(translated.get(key))
+            if not value:
                 print(f"[aviso] id '{key}' sem traducao pt_br; mantendo fonte", file=sys.stderr)
                 value = batch[key]
             out[key] = value
