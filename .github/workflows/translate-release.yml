@@ -98,7 +98,7 @@ jobs:
           cache-read-only: false
           build-scan-publish: true
           build-scan-terms-of-use-url: "https://gradle.com/help/legal-terms-of-use"
-          build-scan-terms-of-use-agree: "true"
+          build-scan-terms-of-use-agree: "yes"
 
       - name: Permissao de execucao ao gradlew
         run: chmod +x gradlew
@@ -106,7 +106,7 @@ jobs:
       - name: Build do JAR (com Build Scan)
         env:
           DEVELOCITY_TERMS_OF_USE_URL: "https://gradle.com/help/legal-terms-of-use"
-          DEVELOCITY_TERMS_OF_USE_AGREE: "true"
+          DEVELOCITY_TERMS_OF_USE_AGREE: "yes"
         run: ./gradlew build -x spotlessCheck --no-daemon -Pkotlin.compiler.execution.strategy=in-process
 
       - name: Localizar JAR
