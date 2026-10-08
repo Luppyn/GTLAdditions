@@ -59,6 +59,10 @@ LANG_PAIRS = [("en_us", "zh_cn")]
 # Idioma gerado na etapa 2, a partir do consenso en_us <-> zh_cn.
 PT_BR = "pt_br"
 
+# Versao do prompt/glossario pt_br. Incremente para forcar a retraducao de
+# entradas ja gravadas quando mudar a politica de traducao do portugues.
+PTBR_HASH_VERSION = "v2"
+
 # Diretorios de lang que entram na sincronizacao.
 LANG_DIRS = [
     "src/main/resources/assets/gtladditions/lang",
@@ -85,6 +89,15 @@ GLOSSARY = """\
 - NUNCA traduza: placeholders %s %1$s %d %%d, codigos de cor §a §6 §c §r, ids snake_case (ex.: biosphere_iii), caminhos .md, comandos /..., tags XML/HTML, nomes de mods.
 """
 
+GLOSSARY_PTBR = """\
+- Mod: GTLAdditions, addon de GregTech Leisure / GregTech CEu (GTLCore).
+- Circuit: Circuito (NAO "programa"). Computation/Computation power: Poder Computacional/CWUt.
+- Multiblock: Multibloco. Hatch: Escotilha. Coil: Bobina. Recipe: Receita.
+- Traduza nomes de blocos e maquinas para portugues brasileiro (ex.: "Laser Source Hatch" -> "Escotilha de Fonte de Laser", "Block of Magmatter" -> "Bloco de Magmatter").
+- Mantenha inalterados nomes de mods (GregTech, AE2, Applied Energistics 2, GuideME), siglas de voltagem (IV, LuV, ZPM, UEV, UHV, UIV, UV, UXV, OpV, MAX) e nomes proprios de materiais.
+- NUNCA traduza: placeholders %s %1$s %d %%d, codigos de cor §a §6 §c §r, ids snake_case (ex.: biosphere_iii), caminhos .md, comandos /..., tags XML/HTML.
+"""
+
 LANG_SYSTEM_PROMPT = """\
 You are a professional localization translator for the Minecraft mod "GTLAdditions".
 Translate game strings between English (en_us) and Simplified Chinese (zh_cn).
@@ -108,6 +121,8 @@ For each entry you receive BOTH the English source and the Simplified Chinese
 (zh_cn) translation. The zh_cn is the result of a context-disambiguation pass:
 use it ONLY to resolve ambiguous English words, but write idiomatic Brazilian
 Portuguese (Minecraft community terms), never a literal translation of the Chinese.
+
+Translate ALL user-facing text, including machine and block names.
 
 CONTEXT / GLOSSARY:
 {glossary}
@@ -143,6 +158,8 @@ You translate GuideME guide pages from English (en) to Brazilian Portuguese (pt_
 You receive the English fragments AND a reference Simplified Chinese (zh_cn)
 translation of the same page. The zh_cn is a context-disambiguation pass; use it
 ONLY to resolve ambiguous terms, but produce idiomatic Brazilian Portuguese.
+
+Translate ALL user-facing text, including machine and block names.
 
 CONTEXT / GLOSSARY:
 {glossary}
@@ -247,7 +264,7 @@ def translate_ptbr_map(entries: dict[str, dict[str, str]], context: str) -> dict
     referencia de desambiguacao. Devolve {id: traducao}."""
     if not entries:
         return {}
-    system = LANG_PTBR_SYSTEM_PROMPT.format(glossary=GLOSSARY)
+    system = LANG_PTBR_SYSTEM_PROMPT.format(glossary=GLOSSARY_PTBR)
     out: dict[str, str] = {}
     items = list(entries.items())
     for i in range(0, len(items), MAX_ENTRIES_PER_CALL):
@@ -271,7 +288,7 @@ def translate_ptbr_md(fragments: dict[str, str], zh_text: str) -> dict[str, str]
     pagina como referencia de desambiguacao."""
     if not fragments:
         return {}
-    system = MD_PTBR_SYSTEM_PROMPT.format(glossary=GLOSSARY)
+    system = MD_PTBR_SYSTEM_PROMPT.format(glossary=GLOSSARY_PTBR)
     out: dict[str, str] = {}
     items = list(fragments.items())
     for i in range(0, len(items), MAX_ENTRIES_PER_CALL):
@@ -296,6 +313,15 @@ def translate_ptbr_md(fragments: dict[str, str], zh_text: str) -> dict[str, str]
 
 def sha1_text(text: str) -> str:
     return hashlib.sha1(text.encode("utf-8")).hexdigest()
+
+
+def md_source_hash(src: Path, version: str = "") -> str:
+    """Hash do conteudo de um .md, opcionalmente versionado para forcar
+    retraducao quando o prompt/glossario do idioma de destino mudar."""
+    data = src.read_bytes()
+    if version:
+        data = (version + "\0").encode("utf-8") + data
+    return hashlib.sha1(data).hexdigest()
 
 
 # ---------------------------------------------------------------------------
@@ -416,7 +442,7 @@ def sync_ptbr_lang(en_path: Path, zh_path: Path, pt_path: Path, apply: bool) -> 
         except json.JSONDecodeError:
             old_hashes = {}
 
-    new_hashes = {k: sha1_text(str(v)) for k, v in en.items()}
+    new_hashes = {k: sha1_text(PTBR_HASH_VERSION + str(v)) for k, v in en.items()}
 
     to_translate: dict[str, dict[str, str]] = {}
     for key, value in en.items():
@@ -552,11 +578,11 @@ def split_body_blocks(body: str, limit: int) -> list[tuple[str, bool]]:
     return blocks
 
 
-def md_needs_translation(src: Path, tgt: Path) -> bool:
+def md_needs_translation(src: Path, tgt: Path, version: str = "") -> bool:
     hash_file = tgt.with_suffix(tgt.suffix + ".srchash")
     if not tgt.exists() or not hash_file.exists():
         return True
-    current = hashlib.sha1(src.read_bytes()).hexdigest()
+    current = md_source_hash(src, version)
     return hash_file.read_text(encoding="utf-8").strip() != current
 
 
@@ -599,7 +625,7 @@ def translate_markdown_file(src: Path, tgt: Path, direction: str, apply: bool) -
     tgt.parent.mkdir(parents=True, exist_ok=True)
     tgt.write_text(new_head + new_body, encoding="utf-8")
     tgt.with_suffix(tgt.suffix + ".srchash").write_text(
-        hashlib.sha1(src.read_bytes()).hexdigest(), encoding="utf-8"
+        md_source_hash(src), encoding="utf-8"
     )
     print(f"  -> gravado {tgt}")
     return True
@@ -608,7 +634,7 @@ def translate_markdown_file(src: Path, tgt: Path, direction: str, apply: bool) -
 def translate_markdown_ptbr_file(src: Path, zh_ref: Path, tgt: Path, apply: bool) -> bool:
     """Etapa 2 para guias: traduz en -> pt_br usando o zh_cn da mesma pagina
     como referencia de desambiguacao."""
-    if not md_needs_translation(src, tgt):
+    if not md_needs_translation(src, tgt, PTBR_HASH_VERSION):
         return False
     print(f"[guia-pt] {src.relative_to(REPO_ROOT)} -> {tgt.relative_to(REPO_ROOT)}")
     if not apply:
@@ -648,7 +674,7 @@ def translate_markdown_ptbr_file(src: Path, zh_ref: Path, tgt: Path, apply: bool
     tgt.parent.mkdir(parents=True, exist_ok=True)
     tgt.write_text(new_head + new_body, encoding="utf-8")
     tgt.with_suffix(tgt.suffix + ".srchash").write_text(
-        hashlib.sha1(src.read_bytes()).hexdigest(), encoding="utf-8"
+        md_source_hash(src, PTBR_HASH_VERSION), encoding="utf-8"
     )
     print(f"  -> gravado {tgt}")
     return True
