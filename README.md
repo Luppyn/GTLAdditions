@@ -26,7 +26,7 @@ Primeiro, baixe o `GregTech Leisure` [aqui](https://pan.quark.cn/s/d13f899cdab5#
 
 Depois, delete o `GTLCore` e instale o mais recente; você pode encontrá-lo [aqui](https://github.com/AaAdoniSsS/GTLCore)
 
-Por fim, adicione este mod à pasta `/mods`
+Por fim, adicione [este mod](https://github.com/Luppyn/GTLAdditions/releases) à pasta `/mods`
 
 Aproveite sua experiência com o GregTech Leisure! ~~talvez você veja essas máquinas depois que não quiser mais jogar GregTech Leisure~~
 
