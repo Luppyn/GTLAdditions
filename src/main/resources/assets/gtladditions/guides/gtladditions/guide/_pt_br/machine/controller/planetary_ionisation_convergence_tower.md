@@ -1,0 +1,42 @@
+---
+navigation:
+  title: Torre de Convergência de Ionização Planetária
+  icon: planetary_ionisation_convergence_tower
+  parent: controller/multiblock_controller.md
+  position: 10
+item_ids:
+  - planetary_ionisation_convergence_tower
+---
+
+# Torre de Convergência de Ionização Planetária
+
+<BlockImage id = "planetary_ionisation_convergence_tower" scale = "8"/>
+
+* Só podem ser usados coils de nível Titânio ou superior;
+* O ciclo operacional dura 3 segundos;
+* Se energia continuar a entrar enquanto o buffer de energia interno estiver cheio, ocorrerá uma explosão de raio de 100 blocos centrada na máquina, e dissipará uma quantidade de energia na rede de energia sem fio equivalente a 1.024 vezes a energia de pulso instantânea do coil;
+* No início do ciclo operacional, um pulso de EU _instantâneo_ e de altíssima potência (1 tick) é injetado no buffer de energia interno, seguido por uma _descarga_ suave de menor potência no buffer durante o restante do ciclo;
+* Após o pulso terminar, o buffer de energia interno irá emitir energia para o ambiente externo através do power bay/laser source bay:
+* O nível do Stellar Thermodynamic Container afeta a capacidade do buffer de energia interno:
+> Básico: 890.000.000.000.000 EU \
+> Avançado: 132.000.000.000.000.000 EU\
+> Supremo: 1.570.000.000.000.000.000 EU
+* O nível do coil afeta o tipo de fluido consumido, a taxa de consumo por ciclo e a geração de energia
+> Titan Steel a Exquisite Gold: <FluidLink id="gtceu:rhenium" /> 73.728 mB, <FluidLink id="gtceu:ice" /> 8 KB, <ItemLink id="kubejs:space_drone_mk2" /> 2×10⁻⁴ unidades \
+> Naquadriatic_Taranium a Star Metal: <FluidLink id="gtceu:promethium" /> 36.864 MB, <FluidLink id="gtceu:liquid_helium" /> 4 KB, <ItemLink id="kubejs:space_drone_mk4" /> 1×10⁻⁴ unidades \
+> Infinity a Eternity: <FluidLink id="gtceu:crystalmatrix" /> 9216 MB, <FluidLink id="kubejs:gelid_cryotheum" /> 1 KB, <ItemLink id="kubejs:space_drone_mk6" /> 2,5×10⁻⁵ unidades \
+>
+> | Nível do Coil         | Instantâneo(A MAX)    | Descarga(A MAX)   |
+> |-----------------------|-----------------------|-------------------|
+> | Titan Steel           | 4.096                 | 16                |
+> | Adamantine            | 32.768                | 128               |
+> | Naquadriatic_Taranium | 524.288               | 256               |
+> | Star Metal            | 4.194.304             | 2.048             |
+> | Infinity              | 8.388.608             | 4.096             |
+> | Hypogen               | 67.108.864            | 32.768            |
+> | Eternity              | 268.435.456           | 131.072           |
+* Clique com o botão direito para inserir um na máquina através do <ItemLink id="gtmthings:creative_laser_hatch"/> portátil para ativar o modo de overclock especial:
+> O ciclo de operação é reduzido para 1s; toda a energia é emitida diretamente para a rede sem fio, e a corrente máxima de saída por disparo é aumentada para 64A MAX+16, independentemente do nível do coil e do buffer interno
+* O consumo e os tipos de materiais neste momento são:
+> <FluidLink id="gtceu:miracle" /> 10mB, <ItemLink id="kubejs:hyperdimensional_drone" /> 1x10^(-6) unidades
+* **Nota**: Se o host for removido, o modo de overclock especial será redefinido e o Creative Laser Hatch não será devolvido.
