@@ -13,6 +13,6 @@ item_ids:
 
 <BlockImage id = "quantum_syphon_matrix" scale = "8"/>
 
-* Um coletor de gás mais eficiente que consome grandes quantidades de energia para obter de forma mais eficiente ar, ar do Nether, ar do End e suas formas líquidas correspondentes
+* Um coletor de gases mais eficiente que consome grandes quantidades de energia para obter de forma mais eficiente ar, ar do Nether, ar do End e suas formas líquidas correspondentes
 * Pode obter ar de Barnarda de forma eficiente ao fabricar <ItemLink id="barnarda_data" /> e posicionar a máquina na dimensão Barnarda C
 * ~~Usa a Torre de Resfriamento para obter o ar líquido correspondente em vez de Congeladores a Vácuo~~

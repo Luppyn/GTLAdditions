@@ -17,7 +17,7 @@ item_ids:
 <BlockImage id = "garden_of_hermes" scale = "4"/>
 </Row>
 
-> Para cada nível de host acima de UEV, as threads do módulo aumentam em 32 \
+> Para cada nível de host acima de UEV, o número de threads do módulo aumenta em 32 \
 > Por padrão, o sistema inicia usando o circuito de programação 1 \
 > Permite o uso de escotilha de laser com potência de <Color color="#00AA00">**UIV**</Color> ou superior \
-> Integra as receitas de Estufa e Área de Pesca, podendo processar todas elas sem alterar o tipo de receita ([Tipos de Receita Múltiplos](../multi_type.md))
+> Integra as receitas de Estufa e Zona de Pesca, podendo processar todas elas sem alterar o tipo de receita ([Tipos de Receita Múltiplos](../multi_type.md))

@@ -19,6 +19,6 @@ item_ids:
 
 * O overclock do Modo Extremo do Ceifador de Nebulosas não é um overclock perfeito
 * Possui bônus de redução de tempo com multiplicador de 0.8^(nível de voltagem do elevador espacial conectado - 8)
-* Contagem de paralelos: n^(nivel do módulo do elevador espacial conectado - 1), ao conectar ao Elevador Espacial, n = 8; ao conectar ao Elevador Espacial MKII, n = 12
+* Contagem de paralelos: n^(nível do módulo de elevador espacial conectado - 1), ao conectar ao Elevador Espacial, n = 8; ao conectar ao Elevador Espacial MKII, n = 12
 * Permite processamento paralelo entre receitas
 * Permite a instalação de escotilhas de laser para maior potência de entrada

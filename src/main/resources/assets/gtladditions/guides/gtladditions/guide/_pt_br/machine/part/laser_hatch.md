@@ -39,4 +39,4 @@ item_ids:
 
 * Adicionadas escotilhas de laser de maior potência: **16777216**A e **67108864**(**3**)A
 * Podem fazer suas máquinas rodarem mais rápido (~~Pode drenar sua rede de energia sem fio devido ao grande buffer da escotilha de laser?~~)
-* ~~O motivo pelo qual a escotilha de fonte de laser é 67108863 em vez de 67108864 é que exceder o limite do tipo long faz com que ela se torne negativa~~
+* ~~O motivo pelo qual a escotilha de fonte de laser é 67108863 em vez de 67108864 é que ultrapassar o limite do tipo long faz com que ela se torne negativa~~

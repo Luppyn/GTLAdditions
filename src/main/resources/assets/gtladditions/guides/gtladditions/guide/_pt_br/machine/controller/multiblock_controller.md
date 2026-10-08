@@ -1,13 +1,13 @@
 ---
 navigation:
-  title: Sobre as Multiblocos do GTLAdditions
+  title: Sobre as Máquinas Multibloco do GTLAdditions
   parent: machine/machine_index.md
   position: 5
 categories: 
 - multiblock controller
 ---
 
-# Sobre as Multiblocos do GTLAdditions
+# Sobre as Máquinas Multibloco do GTLAdditions
 
 ## <Color color="#FF0000">**ZPM**</Color>
 
@@ -21,7 +21,7 @@ categories:
 ## <Color color="#00FF00">**UEV**</Color>
 
 * [Matriz de Sifão Quântico](quantum_syphon_matrix.md)
-* [Arranjo Turvo Taixu](taixu_turbid_array.md)
+* [Matriz Turva de Taixu](taixu_turbid_array.md)
 * [Nexo de Evolução Primordial](primordial_evolution_nexus.md)
 * [Biosfera III](biosphere_iii.md)
 
@@ -31,7 +31,7 @@ categories:
 * [Ceifador de Nebulosas](advanced_space_elevator_module.md)
 * [Núcleo de Transmutação Atômica](atomic_transmutation_core.md)
 * [Planta Química Dimensionalmente Transcendente](dimensionally_transcendent_chemical_plant.md)
-* [Centro de Condensação Anti-entropia](antientropy_condensation_center.md)
+* [Centro de Condensação de Antientropia](antientropy_condensation_center.md)
 * [Cofre de Fundição da Fenda Infernal](inferno_cleft_smelting_vault.md)
 
 ## <Color color="#FFFF00">**UXV**</Color>

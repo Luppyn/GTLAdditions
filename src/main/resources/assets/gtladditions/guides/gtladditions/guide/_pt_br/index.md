@@ -8,7 +8,7 @@ navigation:
 
 Este mod é desenvolvido com base no `GregTech Leisure`.
 Com base neste Modpack, muitas ideias novas foram adicionadas.
-Mantendo a estrutura tecnológica hardcore original,
+Mantendo a estrutura original de tecnologia hardcore,
 ele incorpora uma grande quantidade de designs inovadores e otimizações de balanceamento,
 com o objetivo de proporcionar aos jogadores uma experiência de automação mais fluida e estratégica.
 

@@ -1,15 +1,15 @@
 ---
 navigation:
-  title: Peça de Máquina GTLAdditions
+  title: Peça de Máquina do GTLAdditions
   parent: machine/machine_index.md
   position: 5
 categories: 
 - machine part hatch
 ---
 
-# Sobre a Peça de Máquina GTLAdditions
+# Sobre as Peças de Máquina do GTLAdditions
 
-Introdução à Peça de Máquina GTLAdditions
+Introdução às Peças de Máquina do GTLAdditions
 
 <SubPages />
 

@@ -31,5 +31,5 @@ item_ids:
 
 * Os cinco módulos industriais altamente integrados a bordo da Embarcação Industrial do Espaço Profundo Luz Flutuante são capazes de processar receitas com eficiência excepcional
 * Para cada nível acima de UIV, o consumo de energia e o tempo de processamento do módulo são multiplicados por 0,9
-* Por padrão, o sistema é iniciado usando o circuito de programação 1. Após o circuito de programação 2 ser carregado, uma entrada adicional de <FluidLink id="gtceu:raw_star_matter_plasma" /> aumenta o número de threads no módulo para 256, com uma taxa de consumo de 1B/s.
-* Suporta [Tipos de Receita Múltiplos](../multi_type.md), eliminando a necessidade de alternar frequentemente entre tipos de receita
+* Por padrão, o sistema inicia usando o circuito de programação 1. Após o circuito de programação 2 ser carregado, uma entrada adicional de <FluidLink id="gtceu:raw_star_matter_plasma" /> aumenta o número de threads no módulo para 256, com uma taxa de consumo de 1B/s.
+* Suporta [Múltiplos Tipos de Receita](../multi_type.md), eliminando a necessidade de alternar frequentemente entre tipos de receita

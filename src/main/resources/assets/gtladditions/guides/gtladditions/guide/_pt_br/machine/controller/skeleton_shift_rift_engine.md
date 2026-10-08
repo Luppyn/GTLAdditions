@@ -15,4 +15,4 @@ item_ids:
 > Possui dois modos: modo de Tipo de Receita de Acelerador de Decaimento e modo de Múltiplos Tipos de Receita (Reator de Fusão e Colisor de Partículas) ([Múltiplos Tipos de Receita](../multi_type.md)) \
 > Receitas para operar Reator de Fusão de qualquer classe
 > Multiplicador de tempo: 1 / Nível de Contenção Estelar \
-> Para cada 1200K acima da temperatura da bobina, paralelismo máximo da máquina x2
+> Para cada 1200K acima da temperatura da bobina, o paralelismo máximo da máquina x2

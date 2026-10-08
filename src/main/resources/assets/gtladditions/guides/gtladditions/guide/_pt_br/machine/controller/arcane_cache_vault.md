@@ -12,4 +12,4 @@ item_ids:
 
 <BlockImage id = "arcane_cache_vault" scale = "8"/>
 
-> Um Empacotador Multi-Receita que pode usar escotilhas de laser (~~Sem outras funcionalidades especiais~~)
+> Um Empacotador Multi-Receita que pode usar escotilhas de laser (~~Nenhum outro recurso especial~~)

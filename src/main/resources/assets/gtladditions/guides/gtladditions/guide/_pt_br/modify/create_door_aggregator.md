@@ -18,7 +18,7 @@ item_ids:
 
 * Pode ser convertido instalando <ItemLink id="gtladditions:me_block_conservation" />
 * Selecione o Circuito 24 no barramento de entrada para executar a conversão
-* Apenas o **Cartão de Conversação Supremo** pode ser colocado na Máquina, o qual fornece bônus de paralelismo. A Máquina não funcionará sem ele
+* Apenas o **Cartão de Conversa Suprema** pode ser colocado na Máquina, que fornece bônus de paralelismo. A Máquina não funcionará sem ele
 * Portal da Criação: 65536 paralelos; Agregador Criativo: 8192 paralelos
 * Segure <ItemLink id="gtceu:creative_data_access_hatch" /> e clique com o botão direito no **Barramento de Transmutação** para instalar e operar normalmente
 * Outros métodos de uso do **Barramento de Transmutação** são semelhantes ao <ItemLink id="gtladditions:atomic_transmutation_core" />

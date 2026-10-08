@@ -18,5 +18,5 @@ Introdução à Máquina GTLAdditions
 
 ### Alguns mecanismos
 
-* [Configuração da Máquina GTLAdditions](add_machine_config.md)
-* [Tipos de Múltiplas Receitas](multi_type.md)
+* [Configuração de Máquina GTLAdditions](add_machine_config.md)
+* [Tipos de Receita Múltiplos](multi_type.md)

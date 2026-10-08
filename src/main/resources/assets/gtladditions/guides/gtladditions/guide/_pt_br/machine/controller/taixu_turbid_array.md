@@ -1,6 +1,6 @@
 ---
 navigation:
-  title: Arranjo Turvo Taixu
+  title: Matriz de Turbidez Taixu
   icon: taixu_turbid_array
   parent: controller/multiblock_controller.md
   position: 10
@@ -8,16 +8,16 @@ item_ids:
   - taixu_turbid_array
 ---
 
-# Arranjo Turvo Taixu
+# Matriz de Turbidez Taixu
 
 <BlockImage id = "taixu_turbid_array" scale = "8"/>
 
-> Você pode abrir a GUI do controlador principal e colocar os Enxames Nano correspondentes ou a Escotilha de Energia Criativa no slot de itens no canto inferior direito da GUI \
+> Você pode abrir a GUI do controlador principal e colocar os Enxames Nano correspondentes ou a Escotilha de Energia Criativa no slot de item no canto inferior direito da GUI \
 > Ao colocar uma **Escotilha de Energia Criativa**, colocar uma concederá 3^16 de paralelismo e 100% de bônus de taxa de sucesso (~~colocar várias tem o mesmo efeito~~) \
-> Ao colocar os Enxames Nano correspondentes, você recebe um bônus adicional de taxa de sucesso, sendo o valor do bônus a quantidade de Enxames Nano colocados × bônus base \
+> Ao colocar os Enxames Nano correspondentes, você obtém um bônus adicional de taxa de sucesso, sendo o valor do bônus o número de Enxames Nano colocados × bônus base \
 > Você pode colocar até 64 Enxames Nano ou Escotilhas de Energia Criativa \
-> Ao colocar **Enxame Nano do Ender**, o bônus base é 0.01 \
-> Ao colocar **Enxame Nano do Dragão**, o bônus base é 0.05 \
+> Ao colocar **Enxame Nano do End**, o bônus base é 0.01 \
+> Ao colocar **Enxame Nano de Dragão**, o bônus base é 0.05 \
 > Ao colocar **Enxame Nano do Espaço-Tempo**, o bônus base é 0.1 \
 > Ao colocar **Enxame Nano Eterno**, o bônus base é 0.2
 

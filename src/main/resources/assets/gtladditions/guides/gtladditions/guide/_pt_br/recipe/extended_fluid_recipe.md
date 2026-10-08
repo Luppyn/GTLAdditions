@@ -45,15 +45,15 @@ item_ids:
 ---
 
 # Receitas de Fluidos Estendidas
->No GTLAdditions, <FluidLink id="gtladditions:molten_ruridit" />e<FluidLink id="gtladditions:liquid_ruridit" />foram adicionados para o Ruridit, junto com uma série de receitas relacionadas
+>No GTLAdditions, foram adicionados <FluidLink id="gtladditions:molten_ruridit" />e<FluidLink id="gtladditions:liquid_ruridit" /> para o Ruridit, juntamente com uma série de receitas relacionadas
 
 <Row>
 <Recipe id="gtladditions:alloy_blast_smelter/ruridit" />
 <Recipe id="gtladditions:alloy_blast_smelter/ruridit_gas" />
 </Row>
 
-Além disso, há uma série de receitas de Extrator e Solidificador de Fluidos, junto com as receitas correspondentes de Desconstrução Molecular e Alquimia Caótica
+Além disso, há uma série de receitas de Extrator e Solidificador de Fluidos, juntamente com as receitas correspondentes de Desconstrução Molecular e Alquimia Caótica
 
->No GTLAdditions, formas fluidas foram adicionadas para germânio, rênio e tecnécio 
+>No GTLAdditions, foram adicionadas formas fluidas para germânio, rênio e tecnécio 
 > 
->Ao mesmo tempo, o netúnio também foi obtido na forma de lingote e em várias formas derivadas
+>Ao mesmo tempo, o netúnio também foi obtido em forma de lingote e em diversas formas derivadas

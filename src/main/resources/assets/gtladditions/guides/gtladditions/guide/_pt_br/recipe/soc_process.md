@@ -87,7 +87,7 @@ item_ids:
 
 * O silício monocristalino obtido na etapa anterior pode ser processado através de um tratamento especial para obter um wafer com melhor desempenho(?)
 
-### Wafer Soc
+### Wafer de Soc
 
 <Row>
   <ItemImage id="gtladditions:outstanding_soc_wafer" scale="4" />
@@ -101,9 +101,9 @@ item_ids:
   <ItemImage id="gtladditions:primary_soc_wafer" scale="4" />
 </Row>
 
-* Coloque os wafers processados na **Máquina de Gravação a Laser de Foco Dimensional** para obter wafers Soc
+* Coloque os wafers processados na **Máquina de Gravação a Laser de Foco Dimensional** para obter wafers de Soc
 
-### Chip Soc
+### Chip de Soc
 
 <Row>
   <ItemImage id="gtladditions:outstanding_soc" scale="4" />
@@ -117,4 +117,4 @@ item_ids:
   <ItemImage id="gtladditions:primary_soc" scale="4" />
 </Row>
 
-* Coloque o wafer Soc na cortadora mais uma vez, Parabéns, você obteve o chip Soc, que pode simplificar muitas receitas de circuitos ~~(Chip Soc Primário: ?)~~
+* Coloque o wafer de Soc na cortadora mais uma vez, Parabéns, você obteve o chip de Soc, que pode simplificar muitas receitas de circuitos ~~(Chip de Soc Primário: ?)~~
