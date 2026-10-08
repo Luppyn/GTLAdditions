@@ -61,7 +61,7 @@ PT_BR = "pt_br"
 
 # Versao do prompt/glossario pt_br. Incremente para forcar a retraducao de
 # entradas ja gravadas quando mudar a politica de traducao do portugues.
-PTBR_HASH_VERSION = "v2"
+PTBR_HASH_VERSION = "v3"
 
 # Diretorios de lang que entram na sincronizacao.
 LANG_DIRS = [
