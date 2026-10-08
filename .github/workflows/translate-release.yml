@@ -35,7 +35,7 @@ jobs:
         id: meta
         run: |
           VERSION=$(grep -E '^mod_version=' gradle.properties | cut -d= -f2)
-          TAG="v${VERSION}-build_${GITHUB_RUN_NUMBER}"
+          TAG="version-${VERSION}"
           echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
           echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
           echo "Versao: ${VERSION} | Tag: ${TAG}"
