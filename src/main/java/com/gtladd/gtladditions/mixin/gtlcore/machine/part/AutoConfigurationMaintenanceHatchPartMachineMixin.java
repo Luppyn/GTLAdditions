@@ -89,7 +89,7 @@ public class AutoConfigurationMaintenanceHatchPartMachineMixin extends TieredPar
     }
 
     @Overwrite(remap = false)
-    public void incInternalMultiplier(int multiplier) {
+    private void incInternalMultiplier(int multiplier) {
         durationMultiplier = Math.min(durationMultiplier + 0.01F * (float) multiplier, maxDuration);
     }
 

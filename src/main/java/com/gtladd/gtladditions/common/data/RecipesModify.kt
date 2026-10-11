@@ -17,6 +17,7 @@ import com.gregtechceu.gtceu.data.recipe.builder.GTRecipeBuilder
 
 import com.lowdragmc.lowdraglib.utils.LocalizationUtils
 
+import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.crafting.Ingredient
 import net.minecraft.world.level.material.Fluid
@@ -166,7 +167,7 @@ object RecipesModify {
             val builder = GTLAddRecipesTypes.CHAOTIC_ALCHEMY.copyFrom(recipeBuilder)
             val content = builder.output[CAP]!![0]
             val fluidIngredient = content.content as FluidIngredient
-            val id = (fluidIngredient.stack.fluid as Fluid).builtInRegistryHolder().key().location().toString()
+            val id = BuiltInRegistries.FLUID.getKey(fluidIngredient.stack.fluid)!!.toString()
             if (id.contains("molten")) {
                 builder.output[CAP] = listOf(Content(FluidIngredient.fromValues(SingleStream.createSingle(FluidIngredient.FluidValue(id.replace("molten_", "").getFluid)), fluidIngredient.amount, fluidIngredient.nbt), content.chance, content.maxChance, content.tierChanceBoost, content.slotName, content.uiName))
             }

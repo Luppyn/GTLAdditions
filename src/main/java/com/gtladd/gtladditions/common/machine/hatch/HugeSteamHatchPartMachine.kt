@@ -38,7 +38,7 @@ class HugeSteamHatchPartMachine(holder: IMachineBlockEntity) :
             if ((ingredient.amount - drained.amount).also { ingredient.amount = it } <= 0) return null
             return left
         }
-    }.setFilter { it.fluid.`is`(tag) }
+    }.setFilter { it.fluid.defaultFluidState().`is`(tag) }
 
     override fun createUI(entityPlayer: Player): ModularUI {
         return ModularUI(176, 166, this, entityPlayer)

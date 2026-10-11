@@ -1,6 +1,5 @@
 package com.gtladd.gtladditions.common.machine.multiblock.controller.df
 
-import org.gtlcore.gtlcore.api.machine.ISuspendableMachine
 import org.gtlcore.gtlcore.api.machine.multiblock.IModularMachineHost
 import org.gtlcore.gtlcore.api.machine.multiblock.IModularMachineModule
 import org.gtlcore.gtlcore.api.machine.trait.IRecipeCapabilityMachine
@@ -335,19 +334,11 @@ class RecursiveReverseForge(holder: IMachineBlockEntity) :
 
         override fun onRecipeFinish() {
             lastRecipe?.let { handleRecipeOutput(rrfMachine, it) }
-            if (rrfMachine is ISuspendableMachine) {
-                val ism = rrfMachine as ISuspendableMachine
-                if (ism.`gtlcore$isSuspendAfterFinish`()) {
-                    this.status = Status.SUSPEND
-                    ism.`gtlcore$setSuspendAfterFinish`(false)
-                } else {
-                    val continued = rrfMachine.withSearchContext {
-                        lastOriginRecipe != null && modifySearchingRecipes(lastOriginRecipe)
-                    }
-                    if (continued) return
-                    status = Status.IDLE
-                }
+            val continued = rrfMachine.withSearchContext {
+                lastOriginRecipe != null && modifySearchingRecipes(lastOriginRecipe)
             }
+            if (continued) return
+            status = Status.IDLE
             progress = 0
             duration = 0
         }

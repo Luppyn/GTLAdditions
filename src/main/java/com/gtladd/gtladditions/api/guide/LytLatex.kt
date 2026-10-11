@@ -62,7 +62,7 @@ class LytLatex(private val latexExpression: String) : LytBlock(), InteractiveEle
             val baos = ByteArrayOutputStream()
             ImageIO.write(image, "png", baos)
 
-            this.texture = GuidePageTexture.load(ResourceLocation("latex", UUID.randomUUID().toString()), baos.toByteArray())
+            this.texture = GuidePageTexture.load(ResourceLocation.of("latex:" + UUID.randomUUID().toString(), ':'), baos.toByteArray())
         } catch (_: Exception) {
             this.texture = GuidePageTexture.missing()
         }

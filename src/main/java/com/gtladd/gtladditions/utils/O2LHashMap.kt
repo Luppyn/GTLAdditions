@@ -23,6 +23,7 @@ class O2LHashMap<K> : Object2LongOpenHashMap<K> {
         return oldValue
     }
 
+    @Suppress("UNCHECKED_CAST")
     override fun getLong(k: Any?): Long {
         var pos: Int
         if (k == null) {
@@ -38,6 +39,7 @@ class O2LHashMap<K> : Object2LongOpenHashMap<K> {
         return defRetValue
     }
 
+    @Suppress("UNCHECKED_CAST", "OVERRIDE_DEPRECATION")
     override fun getOrDefault(k: Any?, defaultValue: Long): Long {
         var pos: Int
         if (k == null) {
@@ -53,6 +55,7 @@ class O2LHashMap<K> : Object2LongOpenHashMap<K> {
         return defaultValue
     }
 
+    @Suppress("UNCHECKED_CAST")
     override fun rehash(newN: Int) {
         val key = this.key
         val value = this.value

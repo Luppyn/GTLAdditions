@@ -129,7 +129,7 @@ object GTLAddMachines {
             .tooltipBuilder(GTLAdd_ADD)
             .compassSections(GTCompassSections.STEAM)
             .compassNode("steam_hatch")
-            .renderer { OverlaySteamMachineRenderer(ResourceLocation("gtceu", "block/machine/part/steam_hatch")) }
+            .renderer { OverlaySteamMachineRenderer(ResourceLocation.of("gtceu:block/machine/part/steam_hatch", ':')) }
             .register()
 
         SUPER_INPUT_DUAL_HATCH = REGISTRATE.machine("super_input_dual_hatch", ::SuperDualHatchPartMachine)

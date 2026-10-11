@@ -77,7 +77,7 @@ class CreateDoorMachine(holder: IMachineBlockEntity) : ConversationMachine(holde
                     }
                 } else if (e is ServerPlayer) {
                     if (MachineUtil.hasFullArmorSet(e)) {
-                        val createLevel = sl.server.getLevel(ResourceKey.create(DIMENSION, ResourceLocation("kubejs", "create")))
+                        val createLevel = sl.server.getLevel(ResourceKey.create(DIMENSION, ResourceLocation.of("kubejs:create", ':')))
                         if (createLevel != null) e.teleportTo(createLevel, 0.0, 1.0, 0.0, e.xRot, e.yRot)
                     } else {
                         e.displayClientMessage("message.gtlcore.equipment_incompatible_dimension".toComponent, true)
@@ -149,7 +149,7 @@ class CreateDoorMachine(holder: IMachineBlockEntity) : ConversationMachine(holde
     }
 
     companion object {
-        val dRecipe: GTRecipe by lazy { GTRecipeBuilder.ofRaw().duration(20).dimension(ResourceLocation("overworld")).buildRawRecipe() }
+        val dRecipe: GTRecipe by lazy { GTRecipeBuilder.ofRaw().duration(20).dimension(ResourceLocation.of("overworld", ':')).buildRawRecipe() }
         const val EU: Long = 4L * Int.MAX_VALUE
     }
 }

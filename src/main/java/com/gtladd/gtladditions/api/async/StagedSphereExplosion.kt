@@ -423,7 +423,7 @@ class StagedSphereExplosion(
     }
 
     private fun flushSectionChanges(section: LevelChunkSection, task: SectionTask) {
-        if (sectionChanges.isEmpty) return
+        if (sectionChanges.isEmpty()) return
         val players = level.chunkSource.chunkMap.getPlayers(ChunkPos(task.sx, task.sz), false)
         if (players.isEmpty()) {
             sectionChanges.clear()

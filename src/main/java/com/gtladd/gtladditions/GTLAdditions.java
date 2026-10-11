@@ -11,7 +11,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import com.gtladd.gtladditions.api.registry.GTLAddRegistration;
 import com.gtladd.gtladditions.common.ForgeEvent;
@@ -29,12 +28,11 @@ public class GTLAdditions {
     public static final String NAME = "GTLAdditions";
 
     public static ResourceLocation id(String name) {
-        return new ResourceLocation(GTLAdditions.MOD_ID, name);
+        return ResourceLocation.of(GTLAdditions.MOD_ID + ":" + name, ':');
     }
 
-    public GTLAdditions() {
+    public GTLAdditions(IEventBus modEventBus) {
         init();
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.addListener(ForgeEvent::onLevelTick);
         MinecraftForge.EVENT_BUS.addListener(ForgeEvent::onServerStarted);

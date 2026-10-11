@@ -388,11 +388,9 @@ class PlanetaryIonisationConvergenceTower(holder: IMachineBlockEntity) : Storage
                 if (sound != null) {
                     workingSound = sound.playAutoReleasedSound(
                         {
-                            pictMachine.shouldWorkingPlaySound() && isWorking && !pictMachine.isInValid &&
-                                pictMachine.level!!.isLoaded(pictMachine.pos) && getMachine(
-                                    pictMachine.level,
-                                    pictMachine.pos
-                                ) == pictMachine
+                            val soundLevel = pictMachine.level
+                            soundLevel != null && pictMachine.shouldWorkingPlaySound() && isWorking && !pictMachine.isInValid &&
+                                soundLevel.isLoaded(pictMachine.pos) && getMachine(soundLevel, pictMachine.pos) == pictMachine
                         },
                         pictMachine.pos,
                         true,
