@@ -49,60 +49,26 @@ public final class MapIngredientVariants {
     static List<AbstractMapIngredient> convertToMapIngredient(Object obj) {
         List<AbstractMapIngredient> ingredients = new ObjectArrayList<>(1);
         if (obj instanceof Ingredient ingredient) {
-            switch (ingredient) {
-                case StrictNBTIngredient nbt -> {
-                    if (ingredient instanceof IntCircuitIngredient cir) {
-                        ingredients.add(new MapItemStackNBTIngredient(cir.kjs$getFirst(), cir));
-                    } else ingredients.addAll(MapItemStackNBTIngredient.from(nbt));
+            if (ingredient instanceof StrictNBTIngredient nbt) {
+                if (ingredient instanceof IntCircuitIngredient cir) {
+                    ingredients.add(new MapItemStackNBTIngredient(cir.kjs$getFirst(), cir));
+                } else {
+                    ingredients.addAll(MapItemStackNBTIngredient.from(nbt));
                 }
-                case PartialNBTIngredient nbt -> ingredients.addAll(MapItemStackPartialNBTIngredient.from(nbt));
-                case SizedIngredient sized -> {
-                    switch (sized.getInner()) {
-                        case StrictNBTIngredient nbt -> {
-                            if (sized.getInner() instanceof IntCircuitIngredient cir) {
-                                ingredients.add(new MapItemStackNBTIngredient(cir.kjs$getFirst(), cir));
-                            } else ingredients.addAll(MapItemStackNBTIngredient.from(nbt));
-                        }
-                        case PartialNBTIngredient nbt -> ingredients.addAll(MapItemStackPartialNBTIngredient.from(nbt));
-                        case IntersectionIngredient intersection -> ingredients.add(new MapIntersectionIngredient(intersection));
-                        case null, default -> {
-                            for (var value : ((IngredientAccessor) sized.getInner()).getValues()) {
-                                if (value instanceof Ingredient.TagValue tagValue)
-                                    ingredients.add(new MapItemTagIngredient(((TagValueAccessor) tagValue).getTag()));
-                                else for (var stack : value.getItems()) {
-                                    ingredients.add(new MapItemStackIngredient(stack, sized.getInner()));
-                                }
-                            }
-                        }
-                    }
-                }
-                case IntProviderIngredient intProvider -> {
-                    switch (intProvider.getInner()) {
-                        case StrictNBTIngredient nbt -> {
-                            if (intProvider.getInner() instanceof IntCircuitIngredient cir) {
-                                ingredients.add(new MapItemStackNBTIngredient(cir.kjs$getFirst(), cir));
-                            } else ingredients.addAll(MapItemStackNBTIngredient.from(nbt));
-                        }
-                        case PartialNBTIngredient nbt -> ingredients.addAll(MapItemStackPartialNBTIngredient.from(nbt));
-                        case IntersectionIngredient intersection -> ingredients.add(new MapIntersectionIngredient(intersection));
-                        case null, default -> {
-                            for (var value : ((IngredientAccessor) intProvider.getInner()).getValues()) {
-                                if (value instanceof Ingredient.TagValue tagValue)
-                                    ingredients.add(new MapItemTagIngredient(((TagValueAccessor) tagValue).getTag()));
-                                else for (var stack : value.getItems())
-                                    ingredients.add(new MapItemStackIngredient(stack, intProvider.getInner()));
-                            }
-                        }
-                    }
-                }
-                case IntersectionIngredient intersection -> ingredients.add(new MapIntersectionIngredient(intersection));
-                default -> {
-                    for (var value : ((IngredientAccessor) ingredient).getValues()) {
-                        if (value instanceof Ingredient.TagValue tagValue)
-                            ingredients.add(new MapItemTagIngredient(((TagValueAccessor) tagValue).getTag()));
-                        else for (var stack : value.getItems())
-                            ingredients.add(new MapItemStackIngredient(stack, ingredient));
-                    }
+            } else if (ingredient instanceof PartialNBTIngredient nbt) {
+                ingredients.addAll(MapItemStackPartialNBTIngredient.from(nbt));
+            } else if (ingredient instanceof SizedIngredient sized) {
+                addInnerIngredient(ingredients, sized.getInner());
+            } else if (ingredient instanceof IntProviderIngredient intProvider) {
+                addInnerIngredient(ingredients, intProvider.getInner());
+            } else if (ingredient instanceof IntersectionIngredient intersection) {
+                ingredients.add(new MapIntersectionIngredient(intersection));
+            } else {
+                for (var value : ((IngredientAccessor) ingredient).getValues()) {
+                    if (value instanceof Ingredient.TagValue tagValue)
+                        ingredients.add(new MapItemTagIngredient(((TagValueAccessor) tagValue).getTag()));
+                    else for (var stack : value.getItems())
+                        ingredients.add(new MapItemStackIngredient(stack, ingredient));
                 }
             }
         } else if (obj instanceof FluidIngredient ingredient) {
@@ -115,5 +81,26 @@ public final class MapIngredientVariants {
             }
         }
         return ingredients;
+    }
+
+    private static void addInnerIngredient(List<AbstractMapIngredient> ingredients, Ingredient inner) {
+        if (inner instanceof StrictNBTIngredient nbt) {
+            if (inner instanceof IntCircuitIngredient cir) {
+                ingredients.add(new MapItemStackNBTIngredient(cir.kjs$getFirst(), cir));
+            } else {
+                ingredients.addAll(MapItemStackNBTIngredient.from(nbt));
+            }
+        } else if (inner instanceof PartialNBTIngredient nbt) {
+            ingredients.addAll(MapItemStackPartialNBTIngredient.from(nbt));
+        } else if (inner instanceof IntersectionIngredient intersection) {
+            ingredients.add(new MapIntersectionIngredient(intersection));
+        } else {
+            for (var value : ((IngredientAccessor) inner).getValues()) {
+                if (value instanceof Ingredient.TagValue tagValue)
+                    ingredients.add(new MapItemTagIngredient(((TagValueAccessor) tagValue).getTag()));
+                else for (var stack : value.getItems())
+                    ingredients.add(new MapItemStackIngredient(stack, inner));
+            }
+        }
     }
 }
