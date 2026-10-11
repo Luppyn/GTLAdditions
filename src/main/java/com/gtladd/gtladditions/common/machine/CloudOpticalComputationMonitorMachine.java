@@ -405,8 +405,8 @@ public final class CloudOpticalComputationMonitorMachine extends MetaMachine imp
                                 if (mc.screen != null) mc.setScreen(null);
                                 if (kind == Kind.UN_BIND) {
                                     sendLocationMessages(player, locations);
-                                } else if (!locations.isEmpty() && !locations.getFirst().dim().isEmpty()) {
-                                    var loc = locations.getFirst();
+                                } else if (!locations.isEmpty() && !locations.get(0).dim().isEmpty()) {
+                                    var loc = locations.get(0);
                                     if (loc.dim().equals(mc.level.dimension().location().toString())) {
                                         player.lookAt(EntityAnchorArgument.Anchor.EYES,
                                                 new Vec3(loc.pos().getX() + 0.5, loc.pos().getY() + 0.5, loc.pos().getZ() + 0.5));
@@ -424,7 +424,7 @@ public final class CloudOpticalComputationMonitorMachine extends MetaMachine imp
             };
             button.setClientSideWidget();
             if (kind == Kind.MACHINE) {
-                var loc = locations.getFirst();
+                var loc = locations.get(0);
                 button.setHoverTooltips(
                         Component.translatable("gui.gtladditions.cloud_monitor.tooltip_dim", loc.dim()),
                         Component.translatable("gui.gtladditions.cloud_monitor.tooltip_pos",
@@ -475,7 +475,7 @@ public final class CloudOpticalComputationMonitorMachine extends MetaMachine imp
                         if (machine instanceof IOpticalComputationReceiver receiver) {
                             var p = receiver.getComputationProvider();
                             if (p instanceof CloudOpticalComputationContainer c) {
-                                cwu = Math.clamp(recipe.duration - rm.getRecipeLogic().getProgress(), 0, c.lastResearch);
+                                cwu = Math.max(0, Math.min(recipe.duration - rm.getRecipeLogic().getProgress(), c.lastResearch));
                             }
                         }
                     } else {

@@ -156,7 +156,7 @@ final class LedgerSnapshot {
             fillOrSkipLedgers(supply, aggregateNormal(supply, part, sharedSupply, version));
         }
         while (supplyParts.size() > supplyCursor) {
-            var spare = supplyParts.removeLast();
+            var spare = supplyParts.remove(supplyParts.size() - 1);
             spare.retire();
             spareSupplies.add(spare);
         }
@@ -221,7 +221,7 @@ final class LedgerSnapshot {
 
     void truncateSuppliesFromCursor() {
         while (supplyParts.size() > supplyCursor) {
-            var spare = supplyParts.removeLast();
+            var spare = supplyParts.remove(supplyParts.size() - 1);
             spare.retire();
             spareSupplies.add(spare);
         }
@@ -298,7 +298,7 @@ final class LedgerSnapshot {
             cur.addEntry(entry);
         }
         while (supply.ledgers.size() > used) {
-            supply.ledgers.removeLast().reset();
+            supply.ledgers.remove(supply.ledgers.size() - 1).reset();
         }
     }
 

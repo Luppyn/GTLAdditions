@@ -100,7 +100,7 @@ final class RecipeAllocator {
                         shortfall = c;
                     }
                 }
-                long remaining = Math.clamp(available, 0, demanded);
+                long remaining = Math.max(0L, Math.min(available, demanded));
                 for (int i = 0; i < n && remaining > 0; i++) {
                     long avail = availableOf(ledgers.get(from + i), masks[i], i, takenScratch);
                     long want = Math.min(remaining, avail);

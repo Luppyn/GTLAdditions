@@ -169,7 +169,7 @@ public final class RecipeSearchContext {
 
     public void recordSearchHit(@Nullable GTRecipe recipe, @Nullable List<PartLedger> domain) {
         if (recipe == null || domain == null || domain.isEmpty() || !hitTableValid()) return;
-        var supply = domain.getFirst().owner;
+        var supply = domain.get(0).owner;
         if (supply == null) return;
         int i = hitIndexOf(recipe);
         if (i < 0) {
@@ -301,7 +301,7 @@ public final class RecipeSearchContext {
         buildSnapshot();
         ensureLedger();
         if (domain == null) return tryPlan(recipe, parallel);
-        var supply = domain.isEmpty() ? null : domain.getFirst().owner;
+        var supply = domain.isEmpty() ? null : domain.get(0).owner;
         return supply == null ? null : tryPlanOn(recipe, parallel, supply);
     }
 
