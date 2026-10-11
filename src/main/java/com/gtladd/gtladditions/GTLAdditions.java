@@ -11,6 +11,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import com.gtladd.gtladditions.api.registry.GTLAddRegistration;
 import com.gtladd.gtladditions.common.ForgeEvent;
@@ -29,6 +30,14 @@ public class GTLAdditions {
 
     public static ResourceLocation id(String name) {
         return ResourceLocation.of(GTLAdditions.MOD_ID + ":" + name, ':');
+    }
+
+    /**
+     * No-arg constructor for compatibility with loaders that still call new ModClass().
+     * Delegates to the IEventBus constructor using the current mod event bus.
+     */
+    public GTLAdditions() {
+        this(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     public GTLAdditions(IEventBus modEventBus) {
